@@ -13,8 +13,9 @@ RSpec.describe Descuento do
         @descuento = Descuento.new
         expect(@descuento.calcularDescuentoPorItems(7000,5)).to eq(1750)
     end
+    #descuento total = (1000*5) - 150 + 300 = 5150
     it 'Deberia descuento total' do
         @descuento = Descuento.new
-        expect(@descuento.calcularDescuentoTotal(1000,5,'UT')).to eq()
+        expect(@descuento.calcularDescuentoTotal(1000,5,'UT')).to eq(5150)
     end
 end

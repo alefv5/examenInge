@@ -11,4 +11,10 @@ class Descuento
         end
         return descuentoItems
     end
+    def calcularDescuentoTotal(cantItems,precio_unitario,pais)
+        descuentoItems=calcularDescuentoPorItems(cantItems,precio_unitario)
+        porcentajeDescuento=(cantItems*precio_unitario)*0.06
+        descuentoTotal = (cantItems*precio_unitario)- descuentoItems + porcentajeDescuento
+        return descuentoTotal
+    end
 end
